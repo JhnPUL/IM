@@ -1,0 +1,249 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 104px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    height: 95px;
+    width: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Landing Section Styling */
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.mainpimage {
+    flex: 1; /* Ensures the image takes up equal space */
+    max-width: 600px; /* Sets the max width for the image */
+    width: 100%;
+    border-radius: 10px; /* Adds rounded corners */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds spacing between the text and the image */
+    max-width: 1200px; /* Keeps the layout centered */
+    margin: 0 auto;
+}
+
+.overlay .content {
+    max-width: 50%;
+}
+.content {
+    flex: 1; /* Ensures the text takes up equal space */
+    max-width: 600px; /* Sets a max width for the text content */
+}
+
+
+.content h1 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Gallery Section Styling */
+.gallery {
+    padding: 50px 200px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #ddd;
+}
+
+.gallery-item h3 {
+    font-size: 20px;
+    margin: 15px;
+    color: #000;
+}
+
+.gallery-item p {
+    font-size: 14px;
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+/* Challenges Section Styling */
+.challenges {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.challenges h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts grid layout */
+    gap: 20px;
+}
+
+.challenge-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* The Challenge Overlay Effect */
+.challenge-overlay {
+    position: absolute;
+    top: 100%; /* Start below the item */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: top 0.3s ease; /* Slide-in effect */
+}
+
+.challenge-item:hover .challenge-overlay {
+    top: 0; /* When hovered, the overlay slides in */
+}
+
+.challenge-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.challenge-overlay p {
+    font-size: 16px;
+}
+
+/* Hover Effect on Challenge Item */
+.challenge-item:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .landing {
+        flex-direction: column;
+    }
+
+    .mainpimage {
+        max-width: 100%;
+    }
+
+    .overlay .content {
+        max-width: 100%;
+    }
+}
